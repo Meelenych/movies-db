@@ -1,8 +1,11 @@
-async function fetchApi(searchQuery, page) {
+async function fetchApi(searchQuery) {
 	//URL params
-	const API_KEY = "23474268-70d851d8204f5902d9e83a665";
-	const baseUrl = `https://pixabay.com/api/`;
-	const params = `?q=${searchQuery}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=12`;
+	const API_KEY = "112103a89f43817e1ae7d8a60b354bbb";
+    const baseUrl = `https://api.themoviedb.org/3/movie/`;
+    const params = `${searchQuery}?api_key=${API_KEY}`;
+    
+    // https://api.themoviedb.org/3/movie/550?api_key=112103a89f43817e1ae7d8a60b354bbb
+
 	const url = baseUrl + params;
 
 	const fetchA = await fetch(url).then((response) => {
