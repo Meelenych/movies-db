@@ -1,0 +1,32 @@
+/*
+ * Стили компонента ImageGallery
+ */
+ .ImageGallery {
+    display: grid;
+    max-width: calc(100vw - 48px);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    
+  .CloseBtn {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+     line-height: 1;
+    border: none;
+    background-color: #3f51b5;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    left: 1240px;
+    
+}
