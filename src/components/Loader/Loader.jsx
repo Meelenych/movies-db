@@ -8,7 +8,7 @@ class Loader extends Component {
 		return (
 			<div className={styles.Loader}>
 				<LoaderSpin
-					type="Circles"
+					type="Bars"
 					color="#3f51b5"
 					height={150}
 					width={150}

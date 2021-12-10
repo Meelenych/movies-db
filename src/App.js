@@ -2,6 +2,7 @@
 
 import HomePage from "./components/HomePage/HomePage";
 import MoviesPage from "./components/MoviesPage/MoviesPage";
+
 import styles from "./App.module.css";
 
 export default function App() {
@@ -12,10 +13,10 @@ export default function App() {
   // };
 
   return (
-    <div className={styles.App}>
+    <div className={styles.container}>
       <h1>Here is the movie DB</h1>
-      <HomePage />
       <MoviesPage />
+      <HomePage />
     </div>
   );
 }

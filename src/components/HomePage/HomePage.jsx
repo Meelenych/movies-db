@@ -1,24 +1,81 @@
+import { useState, useEffect } from "react";
 import { fetchApi } from "../../service/api";
 
+import { toast } from "react-toastify";
+import styles from "../HomePage/HomePage.module.css";
+
 export default function HomePage() {
-	fetchApi();
+	// let searchQuery = "star trek";
+	const [loading, setLoading] = useState(false);
+	const [movies, setMovies] = useState([]);
+
+	console.log(loading);
+
+	useEffect(() => {
+		setLoading(true);
+		fetchApi()
+			.then((movieData) => {
+				setMovies([...movieData.results]);
+				if (movieData.results.length >= 1) {
+					toast.success("Search successfull!");
+				} else if (movieData.results.length === 0) {
+					toast.error("Oops, nothing found!");
+				}
+			})
+			.catch((err) => {
+				toast.error("Fetch error!");
+				console.log(err);
+			})
+			.finally(() => setLoading(false));
+	}, []);
+
+	console.log("movies", movies);
+
+	useEffect(() => {
+		window.scrollTo({
+			top: document.documentElement.scrollHeight,
+			behavior: "smooth",
+		});
+	});
 
 	return (
 		<>
 			<h2>The movie finder</h2>
-			<ul>
-				<li>movie 1</li> <li>movie 2</li> <li>movie 3</li>
+			<ul className={styles.ImageGallery}>
+				{movies.map((movie) => {
+					return (
+						<li key={movie.id} className={styles.movies__item}>
+							<div className={styles.movie__card}>
+								<img
+									className={styles.movie__img}
+									src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${movie.poster_path}`}
+									loading="lazy"
+									alt={movie.original_title}
+									data-src={movie.poster_path}
+								/>
+
+								<div className={styles.movie__label}>
+									<h3 className={styles.movie__name}> {movie.title} </h3>
+									<p className={styles.movie__genre}>
+										Genres: {movie.genre_ids}
+									</p>
+									<p className={styles.movie__year}>
+										Release date: {movie.release_date}
+									</p>
+								</div>
+							</div>
+						</li>
+					);
+				})}
 			</ul>
 		</>
 	);
 }
 
+// import Loader from "../Loader/Loader";
 // import ImageGalleryItem from "../GalleryItem/ImageGalleryItem";
-// import { useState, useEffect } from "react";
 // import Modal from "../Modal/Modal";
 // import Button from "../ButtonLoadMore/Button";
-// import Loader from "../Loader/Loader";
-// import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 // import styles from "./ImageGallery.module.css";
 
@@ -66,13 +123,6 @@ export default function HomePage() {
 // 		setPage(1);
 // 	};
 
-// 	useEffect(() => {
-// 		window.scrollTo({
-// 			top: document.documentElement.scrollHeight,
-// 			behavior: "smooth",
-// 		});
-// 	});
-
 // 	const bigImageSetState = (largeImageURL) => {
 // 		setLargeImageURL(largeImageURL);
 // 	};
@@ -114,3 +164,5 @@ export default function HomePage() {
 // 		</>
 // 	);
 // }
+
+//======================================================
