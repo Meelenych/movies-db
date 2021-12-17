@@ -29,3 +29,8 @@
     padding-left: 10px;
 }
 
+.castNothing {
+    line-height: 0.5;
+    font-size: 50px;
+    color:rgb(238, 173, 113);
+}

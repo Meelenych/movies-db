@@ -30,7 +30,12 @@ export default function MovieDetailsPage() {
 	return !movieToShow ? (
 		<Loader />
 	) : (
-		<Link to={`/movies/${movieToShow.id}/cast`}>
+		<Link
+			to={`/movies/${movieToShow.id}/cast`}
+			className={({ isActive }) =>
+				isActive ? styles.activeNavLink : styles.navLink
+			}
+		>
 			<h1>Full information about the movie:</h1>
 			<div className={styles.MovieItem}>
 				<div className={styles.titleAndImage}>

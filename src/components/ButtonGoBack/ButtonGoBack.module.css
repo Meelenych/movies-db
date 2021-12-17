@@ -1,11 +1,26 @@
-a {
-    text-decoration: none;
-}
-.navLink {
-    color:rgb(156, 156, 156);
+
+.goBackWrapper {
+padding: 10px;
 }
 
-.activeNavLink {
-    color: rgb(238, 173, 113);;
+.arrow {
+    width: 100px;
+    height: 50px;
+    fill: rgb(67, 90, 76);
+    transform: rotate(180deg);
+ 
+}
 
+.arrow:hover{
+     fill: #75db9c;
+}
+
+.arrow:active{
+     fill: rgb(238, 173, 113);
+}
+
+.goBackWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

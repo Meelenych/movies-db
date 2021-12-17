@@ -3,6 +3,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import ButtonGoBack from "./components/ButtonGoBack/ButtonGoBack";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
+import ButtonGoUp from "./components/ButtonGoUp/ButtonGoUp";
 
 const Home = lazy(() => import("./views/Home/Home"));
 const Movies = lazy(() => import("./views/Movies/Movies"));
@@ -13,6 +14,13 @@ export default function App() {
   // 	window.addEventListener("DOMContentLoaded", (event) => {
   // 		console.log("DOM fully loaded and parsed");
   // 	});
+  const scrollup = () => {
+    // window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className={styles.container}>
@@ -52,6 +60,8 @@ export default function App() {
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </Suspense>
+
+      <ButtonGoUp onClick={scrollup} />
     </div>
   );
 }

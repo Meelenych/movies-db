@@ -23,12 +23,14 @@ export default function MovieDetailsCast() {
 		/* eslint-disable react-hooks/exhaustive-deps */
 	}, [movieId]);
 
-	// console.log("castToShow", castToShow);
+	console.log("castToShow", castToShow);
 
 	return (
 		<>
 			<h1>Cast</h1>
-			{castToShow && (
+			{castToShow === undefined || castToShow.length === 0 ? (
+				<p className={styles.castNothing}>Oops, no cast available.</p>
+			) : (
 				<ul className={styles.castList}>
 					{castToShow.map((actor) => (
 						<li key={actor.id} className={styles.castLine}>

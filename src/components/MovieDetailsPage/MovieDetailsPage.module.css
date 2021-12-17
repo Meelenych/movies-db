@@ -21,14 +21,18 @@
 }
 
 .MovieTitle {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .MovieImage {
-width: 400px;
+    display: block;
+    width:100%;
+    height:auto;
+    width: 400px; 
 }
 
 .additionalInfo{
+    min-width: 200px;
     padding: 110px 30px 20px 30px;
     display: block;
     font-size: 20px;
@@ -40,6 +44,14 @@ width: 400px;
 }
 
 
+a {
+    text-decoration: none;
+}
+.navLink {
+    color:rgb(156, 156, 156);
+}
+
 .activeNavLink {
     color: rgb(238, 173, 113);;
+
 }

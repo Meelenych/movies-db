@@ -22,18 +22,27 @@ h2 {
     #747272 10px,
     rgb(67, 90, 76) 10px,
     rgb(67, 90, 76) 20px
-    
     );
+    display: flex;
+    align-items: center;
     border-radius: 2px;
     padding-left: 10px;
     line-height: 1.5;
+    min-height: 88px;
+}
+
+nav{
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 1100;
 }
 
 nav>ul{
-    
     list-style: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
       background-image: linear-gradient(
     to bottom,
     rgb(51, 68, 57),
@@ -48,18 +57,17 @@ nav>ul{
 }
 
 nav>ul>li {
-    margin-right: 10px;
-    
+    margin-right: 30px;  
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 .navLink {
     color:rgb(156, 156, 156);
 }
 
 .activeNavLink {
     color: rgb(238, 173, 113);;
-
 }
