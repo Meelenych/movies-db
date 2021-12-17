@@ -9,10 +9,10 @@ class Loader extends Component {
 			<div className={styles.Loader}>
 				<LoaderSpin
 					type="Bars"
-					color="#3f51b5"
+					color="#57e080"
 					height={150}
 					width={150}
-					timeout={3000} //3 secs
+					timeout={2000} //2 secs
 				/>
 			</div>
 		);

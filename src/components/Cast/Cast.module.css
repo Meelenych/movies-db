@@ -1,0 +1,31 @@
+.castList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.castLine {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.castCard {
+ width: 300px;
+ color:rgb(255, 255, 255);
+ border: 1px solid white;
+ border-radius: 2px;
+ background-color:rgb(67, 90, 76) ;
+}
+.castImage {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.castName {
+    padding-left: 10px;
+}
+

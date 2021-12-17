@@ -1,19 +1,17 @@
 {
-  "printWidth": 120,
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleQuote": true,
-  "trailingComma": "all",
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "proseWrap": "always",
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
-  "jsxBracketSameLine": false,
-  "jsxSingleQuote": false,
-  "quoteProps": "as-needed",
-  "requirePragma": false,
-  "semi": false,
-  "vueIndentScriptAndStyle": false,
-  "singleAttributePerLine": false
+    "editor.fontSize": 20,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "emmet.excludeLanguages": [
+        "markdown"
+    ]
 }

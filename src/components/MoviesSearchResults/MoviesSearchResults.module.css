@@ -1,5 +1,5 @@
 .ImageGallery {
-   display: grid;
+    display: grid;
     max-width: calc(100vw - 46px);
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-gap: 16px;
@@ -11,7 +11,8 @@
     margin-right: auto;
   }
 
-    
+   
+
 /* //=============================================== */
  .movies__item {
    display: flex;
@@ -33,10 +34,10 @@
 .movie__img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 
   background: url(../../images/dummy.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -59,7 +60,7 @@
   }
 
   .movie__name {
-  color: rgb(255, 249, 249);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;
