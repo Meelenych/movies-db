@@ -70,6 +70,7 @@ export default function HomePage() {
 
 	return (
 		<>
+			<h1>The Movie DB</h1>
 			<h2>Trending movies</h2>
 			<ul className={styles.ImageGallery}>
 				{loading && <Loader />}

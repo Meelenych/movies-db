@@ -1,6 +1,8 @@
 import styles from "./App.module.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
+import ButtonGoBack from "./components/ButtonGoBack/ButtonGoBack";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 const Home = lazy(() => import("./views/Home/Home"));
 const Movies = lazy(() => import("./views/Movies/Movies"));
@@ -17,20 +19,37 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <ButtonGoBack />
           </li>
           <li>
-            <NavLink to="/movies">Movies</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? styles.activeNavLink : styles.navLink
+              }
+              end
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                isActive ? styles.activeNavLink : styles.navLink
+              }
+            >
+              Movies
+            </NavLink>
           </li>
         </ul>
       </nav>
       <Suspense fallback={<p>Loading...</p>}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/movies/*" element={<Movies />}>
-            <Route path=":movieId/" element={<MovieDetailsPage />}></Route>
-          </Route>
-          <Route path="*">Error 404: Page not found!</Route>
+          <Route path="/movies/*" element={<Movies />}></Route>
+          <Route path=":movieId/" element={<MovieDetailsPage />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </Suspense>
     </div>

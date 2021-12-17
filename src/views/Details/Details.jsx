@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import MovieDetailsPage from "../../components/MovieDetailsPage/MovieDetailsPage";
+import styles from "../../components/MovieDetailsPage/MovieDetailsPage";
 
 const Cast = lazy(() => import("./Cast/Cast"));
 const Reviews = lazy(() => import("./Reviews/Reviews"));
@@ -12,10 +13,14 @@ export default function Details() {
 			<nav>
 				<ul>
 					<li>
-						<NavLink to={`Cast`}>Cast</NavLink>
+						<NavLink to={`Cast`} className={styles.activeNavLink}>
+							Cast
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to={`Reviews`}>Reviews</NavLink>
+						<NavLink to={`Reviews`} className={styles.activeNavLink}>
+							Reviews
+						</NavLink>
 					</li>
 				</ul>
 			</nav>

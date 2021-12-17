@@ -30,6 +30,7 @@ h2 {
 }
 
 nav>ul{
+    
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -48,8 +49,17 @@ nav>ul{
 
 nav>ul>li {
     margin-right: 10px;
+    
 }
 
 a{
     text-decoration: none;
+}
+.navLink {
+    color:rgb(156, 156, 156);
+}
+
+.activeNavLink {
+    color: rgb(238, 173, 113);;
+
 }

@@ -4,8 +4,8 @@ import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
-import styles from "./MoviesSearchResults.module.css";
 import { fetchApiSearch } from "../../service/api";
+import styles from "./MoviesSearchResults.module.css";
 
 export default function MoviesSearchResults({ submitValue }) {
 	const [movies, setMovies] = useState([]);

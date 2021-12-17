@@ -15,7 +15,9 @@
 }
 
 .titleAndImage {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .MovieTitle {
@@ -35,4 +37,9 @@ width: 400px;
 
 .infoText {
     color: rgb(238, 173, 113);
+}
+
+
+.activeNavLink {
+    color: rgb(238, 173, 113);;
 }
