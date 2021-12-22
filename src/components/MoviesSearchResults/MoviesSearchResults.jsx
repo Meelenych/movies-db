@@ -66,6 +66,8 @@ export default function MoviesSearchResults({ submitValue }) {
 
 	return (
 		<>
+			{submitValue === "" && <div className={styles.epmtinessFiller}></div>}
+
 			{submitValue !== "" && <h2>Search results</h2>}
 
 			<ul className={styles.ImageGallery}>

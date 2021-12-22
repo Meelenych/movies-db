@@ -75,3 +75,7 @@
 .movie__label {
 padding: 10px;
 }
+
+.epmtinessFiller {
+    height: calc(100vh - 403px);
+}
