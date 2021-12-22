@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import MovieDetailsPage from "../../components/MovieDetailsPage/MovieDetailsPage";
 
