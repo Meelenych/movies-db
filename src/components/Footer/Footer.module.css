@@ -21,6 +21,13 @@
     border-radius: 2px;
 }
 
+@media screen and (max-width: 700px) {
+.Footer__text {
+     flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .Footer__links{
     margin-left: 5px;
 }
