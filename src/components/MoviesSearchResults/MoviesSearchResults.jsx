@@ -68,8 +68,14 @@ export default function MoviesSearchResults({ submitValue }) {
 		<>
 			{submitValue === "" && <div className={styles.epmtinessFiller}></div>}
 
-			{submitValue !== "" && <h2>Search results</h2>}
+			{submitValue !== "" && movies.length === 0 && (
+				<>
+					<h2>No results</h2>
+					<div className={styles.epmtinessFiller}></div>
+				</>
+			)}
 
+			{submitValue !== "" && movies.length !== 0 && <h2>Search results</h2>}
 			<ul className={styles.ImageGallery}>
 				{loading && <Loader />}
 				{movies.map((movie) => {
