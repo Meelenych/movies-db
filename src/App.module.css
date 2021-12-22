@@ -1,7 +1,7 @@
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 50px 40px 50px ;
+	padding: 0 50px 0px 50px ;
 }
 
 h1 {
@@ -62,4 +62,14 @@ nav>ul>li {
 
 a {
     text-decoration: none;
+    color: rgb(156, 156, 156);
+}
+
+ a:hover {
+color: #75db9c;
+}
+
+
+ a:active {
+color: rgb(238, 173, 113);
 }

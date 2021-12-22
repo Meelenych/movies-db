@@ -41,8 +41,8 @@ export default function MovieDetailsPage() {
 				<div className={styles.titleAndImage}>
 					<h3 className={styles.MovieTitle}>{movieToShow.title}</h3>
 					<img
-						height="525"
-						width="350"
+						height="410"
+						// width="350"
 						className={styles.MovieImage}
 						src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${movieToShow.poster_path}`}
 						alt=""

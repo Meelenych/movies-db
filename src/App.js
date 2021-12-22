@@ -5,6 +5,7 @@ import AppNavBar from "./components/AppNavBar/AppNavBar";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import ButtonGoUp from "./components/ButtonGoUp/ButtonGoUp";
 import Loader from "./components/Loader/Loader";
+import Footer from "./components/Footer/Footer";
 
 const Home = lazy(() => import("./views/Home/Home"));
 const Movies = lazy(() => import("./views/Movies/Movies"));
@@ -35,6 +36,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <ButtonGoUp onClick={scrollup} />
+      <Footer />
     </div>
   );
 }
