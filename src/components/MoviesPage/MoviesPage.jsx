@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "../Loader/Loader";
 import { useState } from "react";
@@ -58,8 +58,8 @@ export default function MoviesPage() {
 				""
 			)}
 			<MoviesSearchResults submitValue={submitValue} />
-			<ToastContainer />
-			<Loader />{" "}
+
+			<Loader />
 		</>
 	);
 }

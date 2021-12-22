@@ -1,4 +1,6 @@
 import styles from "./App.module.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import AppNavBar from "./components/AppNavBar/AppNavBar";
@@ -37,6 +39,7 @@ export default function App() {
       </Suspense>
       <ButtonGoUp onClick={scrollup} />
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

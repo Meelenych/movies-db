@@ -19,9 +19,9 @@ export default function HomePage() {
 			.then((movieData) => {
 				setMovies([...movieData.results]);
 				if (movieData.results.length !== 0) {
-					toast.success("Search successfull!");
+					toast.success("Trending movies loaded");
 				} else if (movieData.results.length === 0) {
-					toast.error("Oops, nothing found!");
+					toast.error("Oops, no trending movies found!");
 				}
 			})
 			.catch((err) => {
@@ -40,9 +40,9 @@ export default function HomePage() {
 					setMovies([...movies, ...movieData.results]);
 
 					if (movieData.results.length >= 1 && page > 1) {
-						toast.success("More results successfully loaded!");
+						toast.success("More trending movies loaded!");
 					} else if (movieData.results.length === 0 && page > 1) {
-						toast.error("Oops, nothing more!");
+						toast.error("Oops, nothing more in trending category!");
 					}
 				})
 				.catch((err) => {
