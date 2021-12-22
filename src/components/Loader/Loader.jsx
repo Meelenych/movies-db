@@ -10,8 +10,8 @@ class Loader extends Component {
 				<LoaderSpin
 					type="Bars"
 					color="#57e080"
-					height={150}
-					width={150}
+					height={100}
+					width={100}
 					timeout={2000} //2 secs
 				/>
 			</div>

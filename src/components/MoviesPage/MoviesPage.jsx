@@ -47,7 +47,6 @@ export default function MoviesPage() {
 								className={styles.SearchFormInput}
 								type="text"
 								autoComplete="off"
-								autoFocus
 								placeholder="Search a movie"
 								onChange={handleChange}
 								value={changeValue}
